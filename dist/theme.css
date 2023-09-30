@@ -1,0 +1,104 @@
+/* 颜色 */
+:root {
+  --ji-theme-op: #4259ef23;
+  --ji-card-bg-none: rgba(255, 255, 255, 0);
+  --ji-main-op-deep: var(--ji-theme-op-deep) !important;
+  --ji-gray-op: #9999992b;
+  --ji-theme-top: var(--ji-theme);
+  --ji-white: #fff;
+  --ji-white-op: rgba(255, 255, 255, 0.2);
+  --ji-black: #000;
+  --ji-black-op: rgba(0, 0, 0, 0.2);
+  --ji-none: rgba(0, 0, 0, 0);
+  --ji-gray: #999999;
+  --ji-yellow: #ffc93e;
+  --ji-orange: #e38100;
+  --ji-border-radius: 8px;
+  --ji-main: var(--ji-theme);
+  --ji-main-op: var(--ji-theme-op);
+  --ji-shadow-theme: 0 8px 12px -3px var(--ji-theme-op);
+  --ji-shadow-main: 0 8px 12px -3px var(--ji-main-op);
+  --ji-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, 0.2);
+  --ji-shadow-white: 0 8px 12px -3px rgba(255, 255, 255, 0.2);
+  --ji-shadow-black: 0 0 12px 4px rgba(0, 0, 0, 0.05);
+  --ji-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62, 0.12);
+  --ji-shadow-red: 0 8px 12px -3px #ee7d7936;
+  --ji-shadow-green: 0 8px 12px -3px #87ee7936;
+  --ji-shadow-border: 0 8px 16px -4px #2c2d300c;
+  --ji-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0, 0.15);
+  --ji-logo-color: linear-gradient(215deg, #4584ff 30%, #ff7676 70%);
+  --style-border: 1px solid var(--ji-card-border);
+  --ji-blue-main: #3b70fc;
+  --style-border-hover: 1px solid var(--ji-main);
+  --style-border-dashed: 1px dashed var(--ji-theme-op);
+  --style-border-avatar: 4px solid var(--ji-background);
+  --style-border-always: 1px solid var(--ji-card-border);
+  --style-border-none: 1px solid transparent;
+  --ji-white-acrylic1: #fefeff !important;
+  --ji-white-acrylic2: #fcfdff !important;
+  --ji-black-acrylic2: #08080a !important;
+  --ji-black-acrylic1: #0b0b0e !important;
+  --ji-main-none: #b8b8b800 !important;
+}
+
+[data-theme="light"] {
+  --ji-theme-op-deep: #4259efdd;
+  --global-bg: #f7f9fe;
+  --ji-theme: #3b70fc;
+  --ji-theme-deep: #1856fb;
+  --ji-theme-op: #4259ef23;
+  --ji-blue: #3b70fc;
+  --ji-red: #d8213c;
+  --ji-pink: #ff7c7c;
+  --ji-green: #57bd6a;
+  --ji-fontcolor: #363636;
+  --ji-background: #f7f9fe;
+  --ji-reverse: #000;
+  --ji-maskbg: rgba(255, 255, 255, 0.6);
+  --ji-maskbgdeep: rgba(255, 255, 255, 0.85);
+  --ji-hovertext: var(--ji-theme);
+  --ji-ahoverbg: #f7f7fa;
+  --ji-lighttext: var(--ji-main);
+  --ji-secondtext: rgba(60, 60, 67, 0.6);
+  --ji-scrollbar: rgba(60, 60, 67, 0.4);
+  --ji-card-btn-bg: #edf0f7;
+  --ji-post-blockquote-bg: #fafcff;
+  --ji-post-tabs-bg: #f2f5f8;
+  --ji-secondbg: #f1f3f8;
+  --ji-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);
+  --ji-card-bg: #fff;
+  --ji-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
+  --ji-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
+  --ji-card-border: #e3e8f7;
+}
+
+[data-theme="dark"] {
+  --ji-theme-op-deep: #0084ffdd;
+  --global-bg: #18171d;
+  --ji-theme: #0084ff;
+  --ji-theme-deep: #0076e5;
+  --ji-theme-op: #0084ff23;
+  --ji-blue: #0084ff;
+  --ji-red: #ff3842;
+  --ji-pink: #ff7c7c;
+  --ji-green: #57bd6a;
+  --ji-fontcolor: #f7f7fa;
+  --ji-background: #18171d;
+  --ji-reverse: #fff;
+  --ji-maskbg: rgba(0, 0, 0, 0.6);
+  --ji-maskbgdeep: rgba(0, 0, 0, 0.85);
+  --ji-hovertext: #0a84ff;
+  --ji-ahoverbg: #fff;
+  --ji-lighttext: #f2b94b;
+  --ji-secondtext: #a1a2b8;
+  --ji-scrollbar: rgba(200, 200, 223, 0.4);
+  --ji-card-btn-bg: #30343f;
+  --ji-post-blockquote-bg: #000;
+  --ji-post-tabs-bg: #121212;
+  --ji-secondbg: #30343f;
+  --ji-shadow-nav: 0 5px 20px 0px rgba(28, 28, 28, 0.4);
+  --ji-card-bg: #1d1b26;
+  --ji-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
+  --ji-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
+  --ji-card-border: #42444a;
+}

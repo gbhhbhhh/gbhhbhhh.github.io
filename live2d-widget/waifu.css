@@ -1,0 +1,312 @@
+#waifu-toggle {
+	background-color: #fa0;
+	border-radius: 5px;
+	bottom: 66px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 12px;
+	left: 0;
+	margin-left: -100px;
+	padding: 5px 2px 5px 5px;
+	position: fixed;
+	transition: margin-left 1s;
+	width: 60px;
+	writing-mode: vertical-rl;
+}
+#waifu 切换 { 背景颜色： #fa0; 边框半径： 5px; 底部： 66px; 颜色： #fff; 光标： 指针; 字体大小： 12px; 左： 0; 左边距： -100px; 填充： 5px 2px 5px 5px; 位置： 固定; 过渡： 左边距 1s; 宽度： 60px; 写入模式： 垂直 RL; }
+#waifu-toggle.waifu-toggle-active {
+	margin-left: -50px;
+}
+#waifu-toggle.waifu-toggle-active { margin-left： -50px; }
+#waifu-toggle.waifu-toggle-active:hover {
+	margin-left: -30px;
+}
+#waifu-toggle.waifu-toggle-active：hover { margin-left： -30px; }
+#waifu {
+	bottom: -1000px;
+	left: 0;
+	line-height: 0;
+	margin-bottom: -10px;
+	position: fixed;
+	transform: translateY(3px);
+	transition: transform .3s ease-in-out, bottom 3s ease-in-out;
+	z-index: 1;
+}
+#waifu { 底部： -1000px; 左： 0; 行高： 0; 底部边距： -10px; 位置： 固定; 转换： 平移Y（3px）; 过渡： 转换 .3s 缓入出， 底部 3s 缓入出; z索引： 1; }
+#waifu:hover {
+	transform: translateY(0);
+}
+#waifu：hover { transform： translateY（0）; }
+#waifu-tips {
+	animation: shake 50s ease-in-out 5s infinite;
+	background-color: rgba(236, 217, 188, .5);
+	border: 1px solid rgba(224, 186, 140, .62);
+	border-radius: 12px;
+	box-shadow: 0 3px 15px 2px rgba(191, 158, 118, .2);
+	font-size: 14px;
+	line-height: 24px;
+	margin: -30px 20px;
+	min-height: 70px;
+	opacity: 0;
+	overflow: hidden;
+	padding: 5px 10px;
+	position: absolute;
+	text-overflow: ellipsis;
+	transition: opacity 1s;
+	width: 250px;
+	word-break: break-all;
+}
+#waifu 提示 { 动画：摇晃 50 秒缓入出 5 秒无限;背景颜色：RGBA（236、217、188、.5）;边框：1px 实心 RGBA（224、186、140、.62）;边框半径：12px;框阴影：0 3px 15px 2px RGBA（191， 158， 118， .2）; 字体大小： 14px; 行高： 24px; 边距： -30px 20px; 最小高度： 70px; 不透明度： 0; 溢出： 隐藏; 填充： 5px 10px; 位置： 绝对; 文本溢出： 省略号; 过渡： 不透明度 1s; 宽度： 250像素;分词：分词;}
+#waifu-tips.waifu-tips-active {
+	opacity: 1;
+	transition: opacity .2s;
+}
+#waifu-tips.waifu-tips-active { opacity： 1; transition： opacity .2s; }
+#waifu-tips span {
+	color: #0099cc;
+}
+#waifu 尖跨度 { 颜色： #0099cc; }
+#live2d {
+	cursor: grab;
+	height: 300px;
+	position: relative;
+	width: 300px;
+}
+#live2d { 光标：抓取;高度：300px;位置：相对;宽度：300px;}
+#live2d:active {
+	cursor: grabbing;
+}
+#live2d：活动 { 光标：抓取; }
+#waifu-tool {
+	color: #aaa;
+	opacity: 0;
+	position: absolute;
+	right: -10px;
+	top: 70px;
+	transition: opacity 1s;
+}
+#waifu 工具{ 颜色： #aaa; 不透明度： 0; 位置： 绝对; 右： -10px; 顶部： 70px; 过渡： 不透明度 1s; }
+#waifu:hover #waifu-tool {
+	opacity: 1;
+}
+#waifu：悬停 #waifu 工具 { 不透明度： 1; }
+#waifu-tool span {
+	display: block;
+	height: 30px;
+	text-align: center;
+}
+#waifu 工具跨度 { 显示：块;高度：30px;文本对齐：居中;}
+#waifu-tool svg {
+	fill: #7b8c9d;
+	cursor: pointer;
+	height: 25px;
+	transition: fill .3s;
+}
+#waifu 工具SVG { 填充： #7b8c9d; 光标： 指针; 高度： 25px; 过渡： 填充 .3s; }
+#waifu-tool svg:hover {
+	fill: #0684bd; /* #34495e */
+}
+#waifu-tool svg：hover { fill： #0684bd; /* #34495e */ }
+@keyframes shake {
+	2% {
+		transform: translate(.5px, -1.5px) rotate(-.5deg);
+	}
+@keyframes 摇晃 { 2% { 变换： 平移（.5px， -1.5px） 旋转（-.5度）; }
+	4% {
+		transform: translate(.5px, 1.5px) rotate(1.5deg);
+	}
+4% { transform： translate（.5px， 1.5px） rotate（1.5deg）; }
+	6% {
+		transform: translate(1.5px, 1.5px) rotate(1.5deg);
+	}
+6% { 变换： 平移（1.5px， 1.5px） 旋转（1.5 度）; }
+	8% {
+		transform: translate(2.5px, 1.5px) rotate(.5deg);
+	}
+8% { 变换： 平移（2.5px， 1.5px） rotate（.5deg）; }
+	10% {
+		transform: translate(.5px, 2.5px) rotate(.5deg);
+	}
+10% { transform： translate（.5px， 2.5px） rotate（.5deg）; }
+	12% {
+		transform: translate(1.5px, 1.5px) rotate(.5deg);
+	}
+12% { transform： translate（1.5px， 1.5px） rotate（.5deg）; }
+	14% {
+		transform: translate(.5px, .5px) rotate(.5deg);
+	}
+14% { transform： translate（.5px， .5px） rotate（.5deg）; }
+	16% {
+		transform: translate(-1.5px, -.5px) rotate(1.5deg);
+	}
+16% { transform： translate（-1.5px， -.5px） rotate（1.5deg）; }
+	18% {
+		transform: translate(.5px, .5px) rotate(1.5deg);
+	}
+18% { transform： translate（.5px， .5px） rotate（1.5deg）; }
+	20% {
+		transform: translate(2.5px, 2.5px) rotate(1.5deg);
+	}
+20% { 变换： 平移（2.5px， 2.5px） 旋转（1.5 度）; }
+	22% {
+		transform: translate(.5px, -1.5px) rotate(1.5deg);
+	}
+22% { transform： translate（.5px， -1.5px） rotate（1.5deg）; }
+	24% {
+		transform: translate(-1.5px, 1.5px) rotate(-.5deg);
+	}
+24% { transform： translate（-1.5px， 1.5px） rotate（-.5deg）; }
+	26% {
+		transform: translate(1.5px, .5px) rotate(1.5deg);
+	}
+26% { 变换： 平移（1.5px， .5px） 旋转（1.5 度）; }
+	28% {
+		transform: translate(-.5px, -.5px) rotate(-.5deg);
+	}
+28% { transform： translate（-.5px， -.5px） rotate（-.5deg）; }
+	30% {
+		transform: translate(1.5px, -.5px) rotate(-.5deg);
+	}
+30% { transform： translate（1.5px， -.5px） rotate（-.5deg）; }
+	32% {
+		transform: translate(2.5px, -1.5px) rotate(1.5deg);
+	}
+32% { 变换： 平移（2.5px， -1.5px） 旋转（1.5 度）; }
+	34% {
+		transform: translate(2.5px, 2.5px) rotate(-.5deg);
+	}
+34% { transform： translate（2.5px， 2.5px） rotate（-.5deg）; }
+	36% {
+		transform: translate(.5px, -1.5px) rotate(.5deg);
+	}
+36% { transform： translate（.5px， -1.5px） rotate（.5deg）; }
+	38% {
+		transform: translate(2.5px, -.5px) rotate(-.5deg);
+	}
+38% { transform： translate（2.5px， -.5px） rotate（-.5deg）; }
+	40% {
+		transform: translate(-.5px, 2.5px) rotate(.5deg);
+	}
+40% { transform： translate（-.5px， 2.5px） rotate（.5deg）; }
+	42% {
+		transform: translate(-1.5px, 2.5px) rotate(.5deg);
+	}
+42% { transform： translate（-1.5px， 2.5px） rotate（.5deg）; }
+	44% {
+		transform: translate(-1.5px, 1.5px) rotate(.5deg);
+	}
+44% { transform： translate（-1.5px， 1.5px） rotate（.5deg）; }
+	46% {
+		transform: translate(1.5px, -.5px) rotate(-.5deg);
+	}
+46% { transform： translate（1.5px， -.5px） rotate（-.5deg）; }
+	48% {
+		transform: translate(2.5px, -.5px) rotate(.5deg);
+	}
+48% { transform： translate（2.5px， -.5px） rotate（.5deg）; }
+	50% {
+		transform: translate(-1.5px, 1.5px) rotate(.5deg);
+	}
+50% { transform： translate（-1.5px， 1.5px） rotate（.5deg）; }
+	52% {
+		transform: translate(-.5px, 1.5px) rotate(.5deg);
+	}
+52% { transform： translate（-.5px， 1.5px） rotate（.5deg）; }
+	54% {
+		transform: translate(-1.5px, 1.5px) rotate(.5deg);
+	}
+54% { transform： translate（-1.5px， 1.5px） rotate（.5deg）; }
+	56% {
+		transform: translate(.5px, 2.5px) rotate(1.5deg);
+	}
+56% { 转换： 平移（.5px， 2.5px） 旋转（1.5 度）; }
+	58% {
+		transform: translate(2.5px, 2.5px) rotate(.5deg);
+	}
+58% { transform： translate（2.5px， 2.5px） rotate（.5deg）; }
+	60% {
+		transform: translate(2.5px, -1.5px) rotate(1.5deg);
+	}
+60% { 变换： 平移（2.5px， -1.5px） 旋转（1.5 度）; }
+	62% {
+		transform: translate(-1.5px, .5px) rotate(1.5deg);
+	}
+62% { transform： translate（-1.5px， .5px） rotate（1.5deg）; }
+	64% {
+		transform: translate(-1.5px, 1.5px) rotate(1.5deg);
+	}
+64% { 变换： 平移（-1.5px， 1.5px） 旋转（1.5度）; }
+	66% {
+		transform: translate(.5px, 2.5px) rotate(1.5deg);
+	}
+66% { 变换： 平移（.5px， 2.5px） 旋转（1.5度）; }
+	68% {
+		transform: translate(2.5px, -1.5px) rotate(1.5deg);
+	}
+68% { 变换： 平移（2.5px， -1.5px） 旋转（1.5 度）; }
+	70% {
+		transform: translate(2.5px, 2.5px) rotate(.5deg);
+	}
+70% { 变换： 平移（2.5px， 2.5px） 旋转（.5deg）; }
+	72% {
+		transform: translate(-.5px, -1.5px) rotate(1.5deg);
+	}
+72% { 变换： 平移（-.5px， -1.5px） 旋转（1.5度）; }
+	74% {
+		transform: translate(-1.5px, 2.5px) rotate(1.5deg);
+	}
+74% { 变换： 平移（-1.5px， 2.5px） 旋转（1.5度）; }
+	76% {
+		transform: translate(-1.5px, 2.5px) rotate(1.5deg);
+	}
+76% { 变换： 平移（-1.5px， 2.5px） 旋转（1.5度）; }
+	78% {
+		transform: translate(-1.5px, 2.5px) rotate(.5deg);
+	}
+78% { transform： translate（-1.5px， 2.5px） rotate（.5deg）; }
+	80% {
+		transform: translate(-1.5px, .5px) rotate(-.5deg);
+	}
+80% { transform： translate（-1.5px， .5px） rotate（-.5deg）; }
+	82% {
+		transform: translate(-1.5px, .5px) rotate(-.5deg);
+	}
+82% { transform： translate（-1.5px， .5px） rotate（-.5deg）; }
+	84% {
+		transform: translate(-.5px, .5px) rotate(1.5deg);
+	}
+84% { transform： translate（-.5px， .5px） rotate（1.5deg）; }
+	86% {
+		transform: translate(2.5px, 1.5px) rotate(.5deg);
+	}
+86% { 变换： 平移（2.5px， 1.5px） 旋转（.5度）; }
+	88% {
+		transform: translate(-1.5px, .5px) rotate(1.5deg);
+	}
+88% { 变换： 平移（-1.5px， .5px） 旋转（1.5度）; }
+	90% {
+		transform: translate(-1.5px, -.5px) rotate(-.5deg);
+	}
+90% { transform： translate（-1.5px， -.5px） rotate（-.5deg）; }
+	92% {
+		transform: translate(-1.5px, -1.5px) rotate(1.5deg);
+	}
+92% { 变换： 平移（-1.5px， -1.5px） 旋转（1.5度）; }
+	94% {
+		transform: translate(.5px, .5px) rotate(-.5deg);
+	}
+94% { transform： translate（.5px， .5px） rotate（-.5deg）; }
+	96% {
+		transform: translate(2.5px, -.5px) rotate(-.5deg);
+	}
+96% { transform： translate（2.5px， -.5px） rotate（-.5deg）; }
+	98% {
+		transform: translate(-1.5px, -1.5px) rotate(-.5deg);
+	}
+98% { transform： translate（-1.5px， -1.5px） rotate（-.5deg）; }
+	0%, 100% {
+		transform: translate(0, 0) rotate(0);
+	}
+}
+
+0%， 100% { transform： translate（0， 0） rotate（0）; } }
